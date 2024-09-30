@@ -6,11 +6,40 @@ function App() {
   let subject=["Maths","Science","English","Hindi"];
   let tags=[<h1>hey</h1>,<h2>boy</h2>];
   let profile={
-    name:"Muskan",
+    name:"Rahul",
     age:20,
     city:"Delhi",
     isEmployed:true
   }
+
+  const user=[{
+    name:"Muskan",
+    age:20,
+    city:"Delhi",
+    isEmployed:true
+  },{
+    name:"Abhishek",
+    age:21,
+    city:"bhopal",
+    isEmployed:false
+  },
+  {
+    name:"Muskan",
+    age:20,
+    city:"Delhi",
+    isEmployed:true
+  }];
+
+  const userlist= user.map((user,index)=>{
+    return(
+      <div key={index}>
+        <h1 className='bg-slate-200 text-2xl '>{user.name}</h1>
+        <h1>{user.age}</h1>
+        <h1>{user.city}</h1>
+        <h1 className='bg-white'>{user.isEmployed}</h1>
+      </div>
+    )
+  })
 
   return (
     <div>
@@ -23,6 +52,8 @@ function App() {
 <h1>{subject}</h1>
 <h1>{tags}</h1>
 <h1 className='text-5xl'>{profile.name}</h1>
+
+{userlist}
 
 
     </div>
