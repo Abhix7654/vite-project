@@ -37,9 +37,19 @@ function App() {
         <h1>{user.age}</h1>
         <h1>{user.city}</h1>
         <h1 className='bg-white'>{user.isEmployed}</h1>
+
+        
       </div>
     )
   })
+  
+  const ClickHandler=(smg)=>{
+  console.log(smg);
+  }
+
+  const wrapper=()=>{
+    ClickHandler("hello");
+  }
 
   return (
     <div>
@@ -55,6 +65,7 @@ function App() {
 
 {userlist}
 
+<button onClick={wrapper} className='bg-red-400 rounded px-4 py-2'>submit</button>
 
     </div>
   )
