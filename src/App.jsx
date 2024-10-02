@@ -53,6 +53,10 @@ function App() {
   }
 
   const [title,settitle]=useState("hello Everyone");
+  const SubmitHandler=(e)=>{
+    e.preventDefault();
+    console.log(e.target.username.value);
+  }
 
   return (
     <div>
@@ -70,6 +74,12 @@ function App() {
 
 <button onClick={wrapper} className='bg-red-400 rounded px-4 py-2'>submit</button>
 <h1 className='text-5xl'>{title}</h1>
+
+<form onSubmit={SubmitHandler}>
+  <input type="text" placeholder='username' name='username'/>
+  <br />
+  <button  className='bg-red-400 rounded px-4 py-2'>submit</button>
+</form>
 
     </div>
   )
