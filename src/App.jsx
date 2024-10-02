@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function App() {
 
@@ -44,12 +44,15 @@ function App() {
   })
   
   const ClickHandler=(smg)=>{
+    settitle("hey boy")
   console.log(smg);
   }
 
   const wrapper=()=>{
-    ClickHandler("hello");
+    ClickHandler("hlw");
   }
+
+  const [title,settitle]=useState("hello Everyone");
 
   return (
     <div>
@@ -66,6 +69,7 @@ function App() {
 {userlist}
 
 <button onClick={wrapper} className='bg-red-400 rounded px-4 py-2'>submit</button>
+<h1 className='text-5xl'>{title}</h1>
 
     </div>
   )
