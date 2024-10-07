@@ -1,10 +1,11 @@
-const app=(probs)=>{
+const Navigation=(probs)=>{
 
-        const [data,setdata]=probs;
+        const {data,setdata}=probs;
         return (
                 <div>
-                <h1>App</h1>
-                <Navigation/>
+               <h2>Navigation:{data}</h2>
                 </div>
         )
         }
+
+export default Navigation;
