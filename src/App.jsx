@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navigation from './Navigation'
+import Section from './Section'
 
 function App() {
 
@@ -85,6 +86,10 @@ function App() {
 </form>
 
 <Navigation data={data} setData={setData} />
+<Section>
+  <h1>Section Component</h1>
+  <p>{data}</p>
+</Section>
 
     </div>
   )
