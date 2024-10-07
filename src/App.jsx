@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Navigation from './Navigation'
 
 function App() {
 
@@ -58,6 +59,8 @@ function App() {
     console.log(e.target.username.value);
   }
 
+  const [data,setData]=useState("Bhut important data");
+
   return (
     <div>
 
@@ -80,6 +83,8 @@ function App() {
   <br />
   <button  className='bg-red-400 rounded px-4 py-2'>submit</button>
 </form>
+
+<Navigation data={data} setData={setData} />
 
     </div>
   )
